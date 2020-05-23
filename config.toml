@@ -1,3 +1,33 @@
 baseURL = "https://www.zeko.dev/"
 languageCode = "tr-tr"
 title = "zeko.dev"
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "tr"
+SectionPagesMenu = "main"
+Paginate = 10
+googleAnalytics = "UA-160310021-1"
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  favicon = "/images/favicon.png"
+  description = "Epicenter of my online presence"
+  facebook = ""
+  twitter = "https://twitter.com/zekzekus"
+  instagram = ""
+  youtube = "https://www.youtube.com/user/zekzekus"
+  github = "https://github.com/zekzekus"
+  gitlab = ""
+  linkedin = "https://www.linkedin.com/in/zekus/"
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  featured_image = "/images/linkedin_banner_image_2.png"
+  recent_posts_number = 2
