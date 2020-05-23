@@ -1,23 +1,24 @@
 #+hugo_base_dir: ../
 
-* Homepage
+* Home
 :PROPERTIES:
 :EXPORT_HUGO_SECTION:
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_MENU: :menu "main"
 :END:
 This is the home of my blog!
-* Blog Posts
+* Posts
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: posts
 :END:
-** My Blog Homepage
+** Posts
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_MENU: :menu "main"
 :END:
 Man, look at all my blog posts.
-** One Bad Night  :@updates:herpes:fear:
+** One Bad Night                                                  :@updates:herpes:fear:
+CLOSED: [2020-05-24 Sun 01:10]
 :PROPERTIES:
 :EXPORT_FILE_NAME: bad-night
 :END:

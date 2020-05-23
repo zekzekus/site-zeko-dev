@@ -1,10 +1,10 @@
 +++
-title = "My Blog Homepage"
+title = "Posts"
 author = ["Zekeriya Koc"]
 draft = false
 [menu.main]
   weight = 2001
-  identifier = "my-blog-homepage"
+  identifier = "posts"
 +++
 
 Man, look at all my blog posts.

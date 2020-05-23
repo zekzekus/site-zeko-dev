@@ -1,10 +1,10 @@
 +++
-title = "Homepage"
+title = "Home"
 author = ["Zekeriya Koc"]
 draft = false
 [menu.main]
   weight = 1001
-  identifier = "homepage"
+  identifier = "home"
 +++
 
 This is the home of my blog!
