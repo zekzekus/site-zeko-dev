@@ -1,0 +1,23 @@
+#+HUGO_BASE_DIR: ../
+
+* Homepage
+:PROPERTIES:
+:EXPORT_HUGO_SECTION:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_MENU: :menu "main"
+:END:
+This is the home of my personal web site!
+* Posts
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: posts
+:END:
+** Posts Page
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:END:
+Man, look at all my blog posts.
+** A Post
+:PROPERTIES:
+:EXPORT_FILE_NAME: a-post
+:END:
+Someone gave me! Oh no!

@@ -1,6 +1,7 @@
 baseURL = "https://www.zeko.dev/"
 languageCode = "tr-tr"
 title = "zeko.dev"
+theme = "ananke"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "tr"
