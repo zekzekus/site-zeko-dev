@@ -1,5 +1,5 @@
 +++
-title = "Posts Page"
+title = "My Blog Homepage"
 author = ["Zekeriya Koc"]
 draft = false
 +++

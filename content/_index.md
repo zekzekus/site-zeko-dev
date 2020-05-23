@@ -7,4 +7,4 @@ draft = false
   identifier = "homepage"
 +++
 
-This is the home of my personal web site!
+This is the home of my blog!
