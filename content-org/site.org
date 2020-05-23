@@ -14,6 +14,7 @@ This is the home of my blog!
 ** My Blog Homepage
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_MENU: :menu "main"
 :END:
 Man, look at all my blog posts.
 ** One Bad Night  :@updates:herpes:fear:
