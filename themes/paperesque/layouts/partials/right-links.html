@@ -1,4 +1,11 @@
 <ul class="list-unstyled right-links">
+{{ range .Site.Menus.topmenu }}
+          <li>
+            <a href="{{ .URL | relURL }}">
+              <span class="post-title">{{ .Name }}</span>
+            </a>
+          </li>
+{{ end }}
 {{ range .Site.Params.TopMenu }}
           <li>
             <a href="{{ .url | relURL }}">

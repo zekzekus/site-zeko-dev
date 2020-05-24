@@ -30,22 +30,6 @@ pygmentsUseClasses = true
 # Turn this on if you want to disable margin notes everywhere!
 # disableMarginNotes = true
 
-# Customise your home page menu here:
-
-[[params.menu]]
-  name = "Recent Posts"
-  url = "posts/"
-
-[[params.menu]]
-  name = "Posts by Tag"
-  url = "tags/"
-
-# And your top-right menu links here.
-
 [[params.topmenu]]
-  name = "about"
-  url = "about"
-
-[[params.topmenu]]
-  name = "rss"
+  name = "RSS"
   url = "posts/index.xml"

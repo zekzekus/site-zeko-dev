@@ -12,10 +12,10 @@
     <div>
       <h1 id="title" style="margin-bottom: 0.75em">{{.Site.Title}}</h1>
       <ul id="list" class="list-unstyled list-of-titles">
-        {{ range .Site.Params.Menu }}
+        {{ range .Site.Menus.main }}
           <li>
-            <a href="{{ .url | relURL }}">
-              <span class="post-title">{{ .name }}</span>
+            <a href="{{ .URL | relURL }}">
+              <span class="post-title">{{ .Name }}</span>
             </a>
           </li>
         {{ end }}
