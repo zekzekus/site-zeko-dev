@@ -6,5 +6,3 @@ draft = false
   weight = 1001
   identifier = "home"
 +++
-
-This is the home of my blog!
