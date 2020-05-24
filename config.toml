@@ -7,6 +7,7 @@ copyright = "© 2020 Zekeriya Koç"
 # We're building drafts in config so that you can see them in the example on
 # Hugo Themes; you almost certainly don't want this on your production site
 buildDrafts = true
+googleAnalytics = "UA-167350623-1"
 
 [markup]
   # This is the default from Hugo 0.60.0 onwards, but we're setting config
