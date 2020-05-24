@@ -4,7 +4,7 @@ This repository includes source files of my personal web site which is served by
 
 Final web site is built with the famous static site generator [[https://gohugo.io][Hugo]]. Before that step I edit whole my site with a single [[https://orgmode.org/][org-mode]] file and generate necessary markdown files to be used by Hugo.
 
-I followed the official document from Hugo to publish the web site with Github Pages. So the directory `public` is actually a git submodule which is my [[https://github.com/zekzekus/zekzekus.github.com][github pages repo]]. Also `.dir-locals.el` file makes generation of markdown files automated. The `Makefile` makes deploying the site just one command to run.
+I followed the official document from Hugo to publish the web site with Github Pages. So the directory ~public~ is actually a git submodule which is my [[https://github.com/zekzekus/zekzekus.github.com][github pages repo]]. Also ~.dir-locals.el~ file makes generation of markdown files automated. The ~Makefile~ makes deploying the site just one command to run.
 
 At the moment I am satisfied with overall architecture.
 
