@@ -4,3 +4,7 @@
 [submodule "themes/hugo-vitae"]
 	path = themes/hugo-vitae
 	url = git://github.com:zekzekus/hugo-vitae
+[submodule "public"]
+	path = public
+	url = git@github.com:zekzekus/zekzekus.github.com
+	branch = master
