@@ -7,4 +7,4 @@ draft = false
   identifier = "about"
 +++
 
-About me
+About me.
