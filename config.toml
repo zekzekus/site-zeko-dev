@@ -1,4 +1,4 @@
-baseURL = "https://www.zeko.dev/"
+baseURL = "https://zeko.dev/"
 languageCode = "en-us"
 title = "Zekeriya Koç"
 theme = "paperesque"
