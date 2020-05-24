@@ -27,8 +27,9 @@ Someone gave me herpes! Oh no!
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: fishsticks
 :END:
-** Fishsticks Home
+** Fishsticks
 :PROPERTIES:
+:EXPORT_HUGO_MENU: :menu "main"
 :EXPORT_FILE_NAME: _index
 :END:
 This section devoted to Orson Wells, R.I.P.

@@ -2,7 +2,7 @@ baseURL = "https://www.zeko.dev/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "Zekeriya Koç"
-title = "/*.zeko.dev/*"
+title = "Zekeriya Koç"
 theme = "hugo-vitae"
 paginate = 5
 enableRobotsTXT = true
@@ -34,7 +34,7 @@ disqusShortname = ""
 	pagetitle = "Zekeriya Koç"
 
 	# Add a subtitle to your website
-	subtitle = "Epicenter of Zekeriya Koç's online presence"
+	subtitle = ""
 
 	# Activate to show authors on pages if available
 	listAuthor = true
