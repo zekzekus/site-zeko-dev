@@ -1,4 +1,5 @@
-#+hugo_base_dir: ../
+#+STARTUP: overview
+#+HUGO_BASE_DIR: ../
 
 * Home
 :PROPERTIES:
