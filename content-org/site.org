@@ -16,7 +16,7 @@
 :EXPORT_HUGO_MENU: :menu "main"
 :END:
 ** FP Istanbul 001 ve Sonrası (biraz da öncesi)
-CLOSED: [2020-05-24 Sun 01:10]
+CLOSED: [2020-03-16 Sun 01:10]
 :PROPERTIES:
 :EXPORT_FILE_NAME: fp-001
 :END:
