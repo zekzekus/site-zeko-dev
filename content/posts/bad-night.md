@@ -7,4 +7,6 @@ categories = ["updates"]
 draft = false
 +++
 
-Someone gave me herpes! Oh no!
+Someone gave me herpes[^fn:1]! Oh no!
+
+[^fn:1]: a disease

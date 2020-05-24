@@ -16,13 +16,29 @@ This is the home of my blog!
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_MENU: :menu "main"
 :END:
-Man, look at all my blog posts.
+Man, look at[fn:1] all my blog posts.
+[fn:1] The link is this
 ** One Bad Night                                                  :@updates:herpes:fear:
 CLOSED: [2020-05-24 Sun 01:10]
 :PROPERTIES:
 :EXPORT_FILE_NAME: bad-night
 :END:
-Someone gave me herpes! Oh no!
+Someone gave me herpes[fn:1]! Oh no!
+[fn:1] a disease
+** Here is another posts
+:PROPERTIES:
+:EXPORT_FILE_NAME: another-posts
+:END:
+Another post
+* About
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: about
+:END:
+** About
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:END:
+About me
 * Fishsticks
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: fishsticks

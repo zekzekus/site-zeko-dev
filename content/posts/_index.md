@@ -7,4 +7,6 @@ draft = false
   identifier = "posts"
 +++
 
-Man, look at all my blog posts.
+Man, look at[^fn:1] all my blog posts.
+
+[^fn:1]: The link is this

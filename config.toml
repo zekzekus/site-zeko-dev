@@ -1,100 +1,51 @@
 baseURL = "https://www.zeko.dev/"
 languageCode = "en-us"
-defaultContentLanguage = "en"
-author = "Zekeriya Koç"
 title = "Zekeriya Koç"
-theme = "hugo-vitae"
-paginate = 5
-enableRobotsTXT = true
+theme = "paperesque"
+copyright = "© 2020 Zekeriya Koç"
 
-copyright = "© Copyright"
+# We're building drafts in config so that you can see them in the example on
+# Hugo Themes; you almost certainly don't want this on your production site
+buildDrafts = true
 
-pygmentsstyle = "colorful"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+[markup]
+  # This is the default from Hugo 0.60.0 onwards, but we're setting config
+  # for it below, so make it explicit
+  defaultMarkdownHandler = "goldmark"
 
-googleAnalytics = ""
-# googleAnalytics = "UA-160310021-1"
-disqusShortname = ""
+# Required to render HTML tags in the hugoExampleSite examples.
+[markup.goldmark.renderer]
+  unsafe = true
 
-[taxonomies]
-	tag = "tags"
-	category = "categories"
-	series = "series"
+# I can't remember if this is required for syntax highlighting or not.
+pygmentsUseClasses = true
+
+# Uncomment these lines for droplist / resource removal support! See the
+# README for more details
+
+# [outputs]
+# page = ["HTML", "droplist"]
 
 [params]
+# Turn this on if you want to disable margin notes everywhere!
+# disableMarginNotes = true
 
-	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	keywords = ["Zekeriya","Koç","Zekeriya Koç", "zekzekus", "zekus"]
+# Customise your home page menu here:
 
-	# Add meta description in head part
-	description = "Epicenter of Zekeriya Koç's (a.k.a. zekzekus) online presence"
+[[params.menu]]
+  name = "Recent Posts"
+  url = "posts/"
 
-	# Add pagetitle to homepage <title> tag
-	pagetitle = "Zekeriya Koç"
+[[params.menu]]
+  name = "Posts by Tag"
+  url = "tags/"
 
-	# Add a subtitle to your website
-	subtitle = "Epicenter of my online presence"
+# And your top-right menu links here.
 
-	# Activate to show authors on pages if available
-	listAuthor = true
+[[params.topmenu]]
+  name = "about"
+  url = "about"
 
-	# Add math typesetting with KaTeX (Global with this Param)
-	math = true
-
-	# Optional 80x80 avatar image.
-	avatar = ""
-
-	# Optional favicons for website
-	#favicon = true
-
-	# Add list of sections that should show up on the homepage
-	mainSections = ["posts"]
-
-	# Add list of Sections/Types that should no be considered by RSS
-	#nofeedSections = ["post"]
-
-	# Deactivate Taxonomies for specific page types
-	#disableTaxoTypes = [""]
-
-	# Content types to disable Disqus on.
-	disableDisqusTypes = ["page"]
-
-	# Custom CSS applied to default styles. (Path is static/css/)
-	customCSS = "custom.css"
-
-# Nav.
-# [[menu.main]]
-# name = "Home"
-# url = "/"
-# weight = 1
-
-# [[menu.main]]
-# name = "All Posts"
-# url = "/post"
-# weight = 2
-
-# [[menu.main]]
-# name = "About"
-# url = "/about"
-# weight = 3
-
-# [[menu.main]]
-# name = "Tags"
-# url = "/tags"
-# weight = 4
-
-# [[menu.main]]
-# name = "Categories"
-# url = "/categories"
-# weight = 5
-
-[[params.social]]
-name = "Github"
-icon = "fab fa-github"
-url = "https://github.com/zekzekus"
-
-[[params.social]]
-name = "RSS"
-icon = "fas fa-rss"
-url = "/index.xml"
+[[params.topmenu]]
+  name = "rss"
+  url = "posts/index.xml"
