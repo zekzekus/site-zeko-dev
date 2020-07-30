@@ -37,7 +37,7 @@ Bağlantıda kalmak için bizi destekleyen (benim da çalışmakta olduğum) Pis
 Görüşmek üzere!
 
 [fn:1] https://psn.vc/7ny88gq4t1
-** DONE Koşmasaydım yazamazdım                                            :@personal:running:writing:
+** Koşmasaydım yazamazdım                                                 :@personal:running:writing:
 CLOSED: [2020-07-26 Sun 21:54]
 :PROPERTIES:
 :EXPORT_FILE_NAME: kosmasaydim-yazamazdim
