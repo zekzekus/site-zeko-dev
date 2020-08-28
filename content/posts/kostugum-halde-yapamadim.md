@@ -1,8 +1,9 @@
 +++
 title = "Koştuğum Halde Yapamadım"
 author = ["Zekeriya Koc"]
+date = 2020-08-28T11:56:00+03:00
 categories = ["personal"]
-draft = true
+draft = false
 +++
 
 Geçenlerde bir yazı yazdım[^fn:1]. Özet geçmek gerekirse, son dönemlerdeki yüksek motivasyonumun kaynaklarından en önemlisi olarak koşmayı göstermiştim. Havalı bir tavırla, ne kadar da müthiş işler başardığımı, kilo verdiğimi, düzenli koşmaya başladığımı ve hatta ilgili yazının varlığından ve başlığından aşikar ki yazmaya bile başladığımı anlattım.
@@ -17,7 +18,7 @@ Sonra evde ekmek yapmak istedim. Yaptım da. Çok güzel olmadı. Çok kötü de
 
 Yanlış hatırlamıyorsam son olarak, yine twitter üzerinden duyurduğum[^fn:3] tasarım öğrenme merakı geldi. Sosyal medyada teşhir? check! , Erkenden para harcama? check! Sağ olsun iyi niyetli dostlar bir sürü kaynak gösterdiler, yardımcı oldular. Gerçekçi bir grup, ya hiç bulaşma, senlik bir iş değil dediler[^fn:4]. Ben ise hemen Udemy kursumu satın alıp figma hesabımı oluşturdum. Kursun 3. videosunun boynu halen bükük. Twitter ahalisi allahtan yüzüme vurmuyor bu rezilliği. Paint'i hâlâ Figma'dan iyi bildiğimi kimse bilmiyor diye şükrediyorum.
 
-Velhasıl, yaptıklarımız, yapacaklarımızın teminatı olabileceği gibi, yapamadıklarımızın özürleri ya da sonuçları da olabilir pekala. Çok takılmadan kendini, keyfini aramakta sorun yok. Evet, entelektüel kapasiteme bir işaretçi bırakayım şuraya da beni öyle sırf yazmış olmak için yazan biri zannetmesinler:
+Velhasıl, yaptıklarımız, yapacaklarımızın teminatı olabileceği gibi, yapamadıklarımızın özürleri ya da sonuçları da olabilir pekala. Çok takılmadan, kendini, keyfini aramakta sorun yok. Evet, entelektüel kapasiteme bir işaretçi bırakayım şuraya da beni öyle sırf yazmış olmak için yazan biri zannetmesinler:
 
 > Quaerendo Invenietis!
 
