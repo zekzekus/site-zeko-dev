@@ -62,7 +62,7 @@ Devam etmeye karar verdim. Uzun yıllardır bir iki post ve bol miktarda tweet h
 [fn:2] https://twitter.com/
 [fn:3] https://tr.wikipedia.org/wiki/Diyetisyen
 [fn:4] https://www.runtastic.com/
-** DONE Koştuğum Halde Yapamadım                                                          :@personal:
+** Koştuğum Halde Yapamadım                                                               :@personal:
 CLOSED: [2020-08-28 Fri 11:56]
 :PROPERTIES:
 :EXPORT_FILE_NAME: kostugum-halde-yapamadim
