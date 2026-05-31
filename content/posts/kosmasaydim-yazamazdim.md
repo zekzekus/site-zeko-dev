@@ -1,10 +1,10 @@
 +++
 title = "Koşmasaydım yazamazdım"
-author = ["Zekeriya Koc"]
 date = 2020-07-26T21:54:00+03:00
+
+[taxonomies]
 tags = ["running", "writing"]
 categories = ["personal"]
-draft = false
 +++
 
 Bugün (25 Temmuz 2020). Sabah saat 09:06 ile 09:36 arasında geçen 30 dakika boyunca koştum. Ve şu anda, bugün (yine 25 Temmuz 2020, ilginç...), saat 22:30 civarı ve bu satırları karalıyorum. Hayır, karalamıyorum. Bir bilgisayarın tuşlarına minik darbeler indiriyorum. İşin bu kısmı çok da mühim değil muhtemelen.

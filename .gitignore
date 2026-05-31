@@ -1,1 +1,14 @@
-/.hugo_build.lock
+# Zola build output
+/public/
+
+# Nix
+/result
+/result-*
+
+# Direnv
+.direnv/
+.envrc
+
+# Editor / OS
+.DS_Store
+*.swp

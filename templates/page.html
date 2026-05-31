@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock %}
+{% block description %}{{ page.description | default(value=page.summary | default(value=config.description) | striptags | truncate(length=160)) }}{% endblock %}
+{% block og_title %}{{ page.title }}{% endblock %}
+{% block og_description %}{{ page.description | default(value=page.summary | default(value=config.description) | striptags | truncate(length=200)) }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_url %}{{ page.permalink | safe }}{% endblock %}
+{% block canonical %}{{ page.permalink | safe }}{% endblock %}
+
+{% block content %}
+  <article class="post">
+    <header class="page-header">
+      <h1>{{ page.title }}</h1>
+      {% if page.date %}
+        <p class="meta">
+          <time datetime="{{ page.date }}">{{ page.date | date(format="%-d %B %Y") }}</time>
+          {% if page.taxonomies.tags %}
+            ·
+            {% for tag in page.taxonomies.tags %}
+              <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">#{{ tag }}</a>{% if not loop.last %} {% endif %}
+            {% endfor %}
+          {% endif %}
+        </p>
+      {% endif %}
+    </header>
+
+    <div class="page-content">
+      {{ page.content | safe }}
+    </div>
+  </article>
+{% endblock %}

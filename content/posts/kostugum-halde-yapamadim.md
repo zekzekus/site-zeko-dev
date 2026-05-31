@@ -1,9 +1,9 @@
 +++
 title = "Koştuğum Halde Yapamadım"
-author = ["Zekeriya Koc"]
 date = 2020-08-28T11:56:00+03:00
+
+[taxonomies]
 categories = ["personal"]
-draft = false
 +++
 
 Geçenlerde bir yazı yazdım[^fn:1]. Özet geçmek gerekirse, son dönemlerdeki yüksek motivasyonumun kaynaklarından en önemlisi olarak koşmayı göstermiştim. Havalı bir tavırla, ne kadar da müthiş işler başardığımı, kilo verdiğimi, düzenli koşmaya başladığımı ve hatta ilgili yazının varlığından ve başlığından aşikar ki yazmaya bile başladığımı anlattım.

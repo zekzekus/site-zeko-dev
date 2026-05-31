@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="{{ lang | default(value=config.default_language) }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
+  <meta name="author" content="{{ config.extra.author | default(value=config.title) }}">
+
+  {# Open Graph #}
+  <meta property="og:site_name" content="{{ config.title }}">
+  <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock %}">
+  <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+  <meta property="og:url" content="{% block og_url %}{{ config.base_url | safe }}{% endblock %}">
+
+  <link rel="canonical" href="{% block canonical %}{{ config.base_url | safe }}{% endblock %}">
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">
+
+  <link rel="stylesheet" href="{{ get_url(path="style.css", cachebust=true) | safe }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>z</text></svg>">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="{{ config.base_url | safe }}">{{ config.title }}</a>
+    <nav class="site-nav" aria-label="Primary">
+      {% for item in config.extra.nav %}
+        <a href="{{ item.url }}">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <p>© {{ now() | date(format="%Y") }} {{ config.extra.author | default(value=config.title) }} ·
+       <a href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">RSS</a> ·
+       <a href="https://github.com/zekzekus/site-zeko-dev">Source</a></p>
+  </footer>
+</body>
+</html>

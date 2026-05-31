@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects.
+# Format: <source> <destination> <status>
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Legacy Hugo RSS paths → Zola Atom feeds
+/index.xml         /atom.xml         301
+/posts/index.xml   /posts/atom.xml   301
