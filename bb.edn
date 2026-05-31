@@ -23,21 +23,31 @@
    :task (shell "rm -rf public")}
 
   deploy
-  {:doc "Full edit→prod: check, build, commit if dirty, push"
-   :task (let [msg     (first *command-line-args*)
-               dirty?  (-> (p/shell {:out :string} "git status --porcelain")
-                           :out str/blank? not)]
-           (when (and dirty? (not msg))
-             (println "✗ working tree has changes — provide a commit message:")
+  {:doc "Full edit→prod (jj-native): check, build, commit @, advance master, push"
+   :task (let [bookmark "master"
+               msg      (first *command-line-args*)
+               ;; In jj, the working copy is always committed to @.
+               ;; "empty" = no diff vs parent = nothing new to ship from @.
+               empty?   (-> (p/shell {:out :string}
+                              "jj" "log" "-r" "@" "--no-graph" "-T" "empty")
+                            :out str/trim (= "true"))]
+           (when (and (not empty?) (not msg))
+             (println "✗ working copy @ has changes — provide a description:")
              (println "  bb deploy \"my message\"")
              (System/exit 1))
 
-           (println "▸ zola check")   (shell "zola check")
-           (println "▸ zola build")   (shell "zola build")
+           (println "▸ zola check")  (shell "zola check")
+           (println "▸ zola build")  (shell "zola build")
 
-           (when dirty?
-             (println "▸ git add -A") (shell "git add -A")
-             (println "▸ git commit") (shell "git" "commit" "-m" msg))
+           (when-not empty?
+             (println (str "▸ jj commit -m " (pr-str msg)))
+             (shell "jj" "commit" "-m" msg))
 
-           (println "▸ git push")     (shell "git push")
+           (println (str "▸ jj bookmark move " bookmark " --to @-"))
+           ;; No-op if bookmark already at @-; errors if it would go backwards.
+           (p/shell {:continue true}
+                    "jj" "bookmark" "move" bookmark "--to" "@-")
+
+           (println "▸ jj git push")
+           (shell "jj" "git" "push")
            (println "✓ pushed — Cloudflare will deploy in ~30–60s"))}}}
