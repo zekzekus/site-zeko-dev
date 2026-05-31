@@ -4,6 +4,7 @@
 
  :tasks
  {:requires ([babashka.process :as p]
+             [babashka.tasks :refer [run]]
              [clojure.string :as str])
 
   serve
@@ -26,8 +27,8 @@
   {:doc "Full edit→prod (jj-native): check, build, commit @, advance master, push"
    :task (let [bookmark "master"
                msg      (first *command-line-args*)
-               ;; In jj, the working copy is always committed to @.
-               ;; "empty" = no diff vs parent = nothing new to ship from @.
+               ;; In jj the working copy is always committed to @.
+               ;; empty = no diff vs parent = nothing new to ship.
                empty?   (-> (p/shell {:out :string}
                               "jj" "log" "-r" "@" "--no-graph" "-T" "empty")
                             :out str/trim (= "true"))]
@@ -36,18 +37,14 @@
              (println "  bb deploy \"my message\"")
              (System/exit 1))
 
-           (println "▸ zola check")  (shell "zola check")
-           (println "▸ zola build")  (shell "zola build")
+           (run 'check)
+           (run 'build)
 
            (when-not empty?
-             (println (str "▸ jj commit -m " (pr-str msg)))
              (shell "jj" "commit" "-m" msg))
 
-           (println (str "▸ jj bookmark move " bookmark " --to @-"))
-           ;; No-op if bookmark already at @-; errors if it would go backwards.
+           ;; Soft-fails if bookmark already at @-.
            (p/shell {:continue true}
                     "jj" "bookmark" "move" bookmark "--to" "@-")
-
-           (println "▸ jj git push")
            (shell "jj" "git" "push")
            (println "✓ pushed — Cloudflare will deploy in ~30–60s"))}}}
