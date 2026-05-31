@@ -11,7 +11,7 @@
     <ul class="taxonomy-terms">
       {% for term in terms %}
         <li>
-          <a href="{{ term.permalink | safe }}">{{ term.name }}</a>
+          <a href="{{ term.path | safe }}">{{ term.name }}</a>
           <span class="meta">({{ term.pages | length }})</span>
         </li>
       {% endfor %}

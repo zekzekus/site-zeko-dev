@@ -13,12 +13,12 @@
         {% for page in posts.pages | slice(end=10) %}
           <li>
             <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
-            <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+            <a href="{{ page.path | safe }}">{{ page.title }}</a>
           </li>
         {% endfor %}
       </ul>
       {% if posts.pages | length > 10 %}
-        <p><a href="{{ posts.permalink | safe }}">All posts →</a></p>
+        <p><a href="{{ posts.path | safe }}">All posts →</a></p>
       {% endif %}
     </section>
   {% endif %}

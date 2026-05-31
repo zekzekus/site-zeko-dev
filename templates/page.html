@@ -18,7 +18,7 @@
           {% if page.taxonomies.tags %}
             ·
             {% for tag in page.taxonomies.tags %}
-              <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">#{{ tag }}</a>{% if not loop.last %} {% endif %}
+              <a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>{% if not loop.last %} {% endif %}
             {% endfor %}
           {% endif %}
         </p>

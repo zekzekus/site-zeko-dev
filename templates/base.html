@@ -15,16 +15,16 @@
   <meta property="og:url" content="{% block og_url %}{{ config.base_url | safe }}{% endblock %}">
 
   <link rel="canonical" href="{% block canonical %}{{ config.base_url | safe }}{% endblock %}">
-  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="/atom.xml">
 
-  <link rel="stylesheet" href="{{ get_url(path="style.css", cachebust=true) | safe }}">
+  <link rel="stylesheet" href="/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>z</text></svg>">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="brand" href="{{ config.base_url | safe }}">{{ config.title }}</a>
+    <a class="brand" href="/">{{ config.title }}</a>
     <nav class="site-nav" aria-label="Primary">
       {% for item in config.extra.nav %}
         <a href="{{ item.url }}">{{ item.name }}</a>
@@ -38,7 +38,7 @@
 
   <footer class="site-footer">
     <p>© {{ now() | date(format="%Y") }} {{ config.extra.author | default(value=config.title) }} ·
-       <a href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">RSS</a> ·
+       <a href="/atom.xml">RSS</a> ·
        <a href="https://github.com/zekzekus/site-zeko-dev">Source</a></p>
   </footer>
 </body>
