@@ -1,0 +1,19 @@
+// Cloudflare Workers config. Docs: https://developers.cloudflare.com/workers/wrangler/configuration/
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "site-zeko-dev",
+  "compatibility_date": "2026-05-01",
+
+  // How Cloudflare builds the site on every push.
+  "build": {
+    "command": "./build.sh"
+  },
+
+  // Serve ./public/ (Zola's build output) as static assets.
+  // Routes/custom domains are configured in the dashboard after first deploy.
+  "assets": {
+    "directory": "./public/",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
