@@ -13,12 +13,13 @@
           name = "site-zeko-dev";
           packages = [
             pkgs.zola
+            pkgs.babashka
           ];
           shellHook = ''
-            echo "zeko.dev dev shell — $(zola --version)"
-            echo "  zola serve   # live preview on http://127.0.0.1:1111"
-            echo "  zola build   # produce ./public"
-            echo "  zola check   # validate links and content"
+            echo "zeko.dev dev shell — $(zola --version), $(bb --version)"
+            echo ""
+            echo "Tasks (run with 'bb <task>'):"
+            bb tasks 2>/dev/null || true
           '';
         };
 

@@ -1,0 +1,43 @@
+;; Task runner for site-zeko-dev.
+;; Run `bb tasks` to see what's available, `bb <task>` to run one.
+{:min-bb-version "1.3.0"
+
+ :tasks
+ {:requires ([babashka.process :as p]
+             [clojure.string :as str])
+
+  serve
+  {:doc "Live preview at http://127.0.0.1:1111 (with drafts)"
+   :task (shell "zola serve --drafts")}
+
+  build
+  {:doc "Build site into ./public"
+   :task (shell "zola build")}
+
+  check
+  {:doc "Validate internal links + anchors"
+   :task (shell "zola check")}
+
+  clean
+  {:doc "Remove build output"
+   :task (shell "rm -rf public")}
+
+  deploy
+  {:doc "Full edit→prod: check, build, commit if dirty, push"
+   :task (let [msg     (first *command-line-args*)
+               dirty?  (-> (p/shell {:out :string} "git status --porcelain")
+                           :out str/blank? not)]
+           (when (and dirty? (not msg))
+             (println "✗ working tree has changes — provide a commit message:")
+             (println "  bb deploy \"my message\"")
+             (System/exit 1))
+
+           (println "▸ zola check")   (shell "zola check")
+           (println "▸ zola build")   (shell "zola build")
+
+           (when dirty?
+             (println "▸ git add -A") (shell "git add -A")
+             (println "▸ git commit") (shell "git" "commit" "-m" msg))
+
+           (println "▸ git push")     (shell "git push")
+           (println "✓ pushed — Cloudflare will deploy in ~30–60s"))}}}

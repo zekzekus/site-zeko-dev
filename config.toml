@@ -20,6 +20,11 @@ taxonomies = [
   { name = "categories", feed = true },
 ]
 
+[link_checker]
+# External link rot is normal for old posts; don't fail the build on it.
+external_level = "warn"
+internal_level = "error"
+
 [markdown]
 smart_punctuation = true
 external_links_target_blank = true
